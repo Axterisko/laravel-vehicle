@@ -31,6 +31,6 @@ class CreateVehicleModelsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('vehicle_models');
+        Schema::dropIfExists('vehicle_models');
     }
 }

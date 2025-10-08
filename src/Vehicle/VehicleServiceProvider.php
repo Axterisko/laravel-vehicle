@@ -23,10 +23,15 @@ class VehicleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Support both Laravel 7.x and earlier (seeds) and Laravel 8+ (seeders)
+        $seedersPath = is_dir(database_path('seeders'))
+            ? database_path('seeders/VehicleTablesSeeder.php')
+            : database_path('seeds/VehicleTablesSeeder.php');
+
         $this->publishes([
             __DIR__.'/../config/vehicles.php' => config_path('vehicles.php'),
             __DIR__.'/../database/migrations/' => database_path('migrations'),
-            __DIR__.'/../database/seeds/VehicleTablesSeeder.php' => database_path('seeds/VehicleTablesSeeder.php')
+            __DIR__.'/../database/seeds/VehicleTablesSeeder.php' => $seedersPath
         ], 'laravel-vehicle');
     }
 

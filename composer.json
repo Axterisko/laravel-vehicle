@@ -9,12 +9,11 @@
             "homepage": "www.axterisko.it"
         }
     ],
-    "minimum-stability": "dev",
     "type": "package",
     "require-dev": {
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0",
         "mockery/mockery": "^1.1",
-        "orchestra/testbench": "~3|~4",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
         "sempro/phpunit-pretty-print": "^1.0"
     },
     "require": {

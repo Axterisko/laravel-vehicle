@@ -27,6 +27,6 @@ class CreateVehicleMakesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('vehicle_makes');
+        Schema::dropIfExists('vehicle_makes');
     }
 }

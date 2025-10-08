@@ -31,6 +31,6 @@ class CreateVehicleModelYearsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('vehicle_model_years');
+        Schema::dropIfExists('vehicle_model_years');
     }
 }
